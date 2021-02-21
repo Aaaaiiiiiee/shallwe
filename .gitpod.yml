@@ -1,0 +1,10 @@
+# The Docker image to run your workspace in. Defaults to gitpod/workspace-full
+image:
+  file: .gitpod.Dockerfile
+# Command to start on workspace startup (optional)
+tasks:
+  - name: pm2
+    init: pm2
+    command: pm2 start main.js --watch --ignore-watch="sessions/*"
+  - name: mysql
+    init: mysql
