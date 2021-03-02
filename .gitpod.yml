@@ -8,3 +8,6 @@ tasks:
     command: pm2 start main.js --watch --ignore-watch="sessions/*"
   - name: mysql
     init: mysql
+  - name: npm
+  - name: yarn
+  - name: git
